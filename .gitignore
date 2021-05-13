@@ -1,3 +1,6 @@
+# Project specific files
+riot-api-key.txt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -127,3 +130,27 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Docker https://github.com/atlassian/docker/blob/master/.gitignore
+.vagrant*
+bin
+docker/docker
+.*.swp
+a.out
+*.orig
+build_src
+.flymake*
+.idea
+.DS_Store
+docs/_build
+docs/_static
+docs/_templates
+.gopath/
+.dotcloud
+*.test
+bundles/
+.hg/
+.git/
+vendor/pkg/
+pyenv
+Vagrantfile
