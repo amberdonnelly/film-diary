@@ -1,21 +1,11 @@
-# https://runnable.com/docker/python/dockerize-your-flask-application
+FROM python:3
 
-FROM ubuntu:16.04
+WORKDIR /usr/src/app
 
-MAINTANER Your Name "amberwdonnelly@gmail.com"
+COPY requirements.txt ./
 
-RUN apt-get update -y && \
-    apt-get install -y python-pip python-dev
+RUN pip install --no-cache-dir -r requirements.txt
 
-# We copy just the requirements.txt first to leverage Docker cache
-COPY ./requirements.txt /app/requirements.txt
+COPY . .
 
-WORKDIR /app
-
-RUN pip install -r requirements.txt
-
-COPY . /app
-
-ENTRYPOINT [ "python" ]
-
-CMD [ "app.py" ]
+CMD [  "python", "./src/app.py" ]

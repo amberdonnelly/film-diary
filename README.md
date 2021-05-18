@@ -16,12 +16,12 @@ Limitations on requests enforced by Riot:
 From the root of the repository, build the docker image:
 
 ```
- docker build -t mastery-grinder .
+docker build -t mastery-grinder .
 ```
 
 Then run the image with
 ```
-docker run -dp 3000:3000 mastery-grinder
+docker run -e 5000 -p 5000:5000 mastery-grinder
 ```
 
-The app can be accessed locally at http://localhost:3000/.
+The app can be accessed locally at http://localhost:5000/.
